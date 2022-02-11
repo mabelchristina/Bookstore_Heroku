@@ -1,0 +1,124 @@
+<div class="main" [ngStyle.xs]="{'width.px': 550, color: 'blue'}">
+
+    <div fxLayout="row" fxLayoutAlign="center center">
+        <div fxLayout="column" fxLayoutAlign="space-between center" fxLayout.xs="row" fxHide.lt-sm>
+            <mat-card class="example-card " style="background-color: honeydew;">
+                <img src="../../../../assets/Womencart.png" class="image">
+                <h1 class="h1">Online Book Shopping</h1>
+            </mat-card>
+        </div>
+
+        <div style="display: flex;flex-flow:row">
+            <mat-card class="example-card2" style="background-color: honeydew;">
+                <div fxLayout="row" fxLayoutAlign="space-evenly start" style="margin-top:-89px;">
+                    <mat-tab-group>
+                        <div style="background-color: gray;">
+                            <mat-tab label="Login">
+                                <form [formGroup]="loginForm" (ngSubmit)="onLogin()" fxLayout="column"
+                                    fxLayoutAlign="start start"  style="margin-top: 8%;">
+                                    <div>
+                                        <mat-form-field appearance="outline">
+                                            <mat-label>Select an option</mat-label>
+                                            <mat-select formControlName="selectedValue" disableRipple>
+                                              <mat-option  value="User">User</mat-option>
+                                              <mat-option value="Admin">Admin</mat-option>
+                                            </mat-select>
+                                          </mat-form-field>
+                                    </div>
+                                    <div>
+                                        <span>Email id</span>
+                                        <div>
+                                            <mat-form-field width="600px" appearance="outline">
+                                                <input matInput formControlName="email">
+                                            </mat-form-field>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <span>Password</span>
+                                        <div>
+                                            <mat-form-field appearance="outline">
+                                                <input matInput formControlName="password">
+                                            </mat-form-field>
+                                        </div>
+
+                                    </div>
+                                    <div style='margin-TOP:16px;'>
+                                        <span class="forgetpass">forgetpassword?
+                                        </span>
+                                    </div>
+
+
+                                    <button class="loginbutton" style="color: white;">Login</button>
+                                </form>
+
+                                <div>
+                                    <h2><span>or</span></h2>
+                                </div>
+                                <div fxLayout="row" fxLayoutAlign="space-around center" fxLayoutGap="20px"
+                                    fxLayout.xs="column">
+                                    <button class="bottombuttons" style="color: white;">Facebook</button>
+                                    <button style=" background-color: #b4b2b2;" class="bottombuttons">Google</button>
+                                </div>
+                            </mat-tab>
+                        </div>
+
+                        <div style="background-color: honeydew;">
+                            <mat-tab label="SignUp">
+                                <form [formGroup]="signupForm" fxLayout="column" fxLayoutAlign="start start" style="margin-top: 8%;">
+                                    <div>
+                                        <mat-form-field appearance="outline">
+                                            <mat-label>Select an option</mat-label>
+                                            <mat-select formControlName="selectedValue" disableRipple>
+                                              <mat-option  value="User">User</mat-option>
+                                              <mat-option value="Admin">Admin</mat-option>
+                                            </mat-select>
+                                          </mat-form-field>
+                                    </div>
+                                    <div>
+                                        <span>Fullname</span>
+                                        <div>
+                                            <mat-form-field width="600px" appearance="outline">
+                                                <input matInput formControlName="fullName">
+                                            </mat-form-field>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <span>EmailId</span>
+                                        <div>
+                                            <mat-form-field width="600px" appearance="outline">
+                                                <input matInput formControlName="email">
+                                            </mat-form-field>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <span>Password</span>
+                                        <div>
+                                            <mat-form-field appearance="outline">
+
+                                                <input matInput [type]="hide?'password':'text'" matInput
+                                                    formControlName="password" autocomplete="on">
+                                            </mat-form-field>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <span>Mobile Number</span>
+                                        <div>
+                                            <mat-form-field appearance="outline">
+
+                                                <input matInput matInput formControlName="mobileNumber">
+                                            </mat-form-field>
+                                        </div>
+                                    </div>
+                                </form>
+                                <button (click)="onSignup()" class="loginbutton" style="color: white;">Signup</button>
+                            </mat-tab>
+                        </div>
+
+                    </mat-tab-group>
+                </div>
+            </mat-card>
+        </div>
+    </div>
+</div>
