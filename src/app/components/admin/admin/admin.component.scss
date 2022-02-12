@@ -1,14 +1,13 @@
-@import '~@angular/material/prebuilt-themes/indigo-pink.css';
 .css-serial {
-    counter-reset: serial-number; /* Set the serial number counter to 0 */
+    counter-reset: serial-number; 
     border: 1px solid;
     margin-left: auto;
     margin-right: auto;
     margin-top: 50px;
 }
 .css-serial td:first-child:before {
-    counter-increment: serial-number; /* Increment the serial number counter */
-    content: counter(serial-number); /* Display the counter */
+    counter-increment: serial-number;
+    content: counter(serial-number); 
 }
 
 td {
