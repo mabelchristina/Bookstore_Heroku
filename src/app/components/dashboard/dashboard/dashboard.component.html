@@ -1,10 +1,10 @@
 <div class="dash-container">
     <mat-toolbar [ngClass.xs]="'tool-div'">
-        <img src="../../../assets/education.svg" alt="" width="31px" height="24px" class="book-img">
+        <img src="../../../assets/education.svg" alt="" width="31px" height="20px" class="book-img">
         <span class="text1">Bookstore</span>
         <span class="search" fxHide.lt-md fxFlex=40 fxLayout="row" fxLayoutAlign="start center">
             <a href="#" fxHide.lt-sm>
-              //  <mat-icon  img src="../../../../assets/search_black_24dp.svg"></mat-icon>
+               <mat-icon  img src="../../../../assets/search_black_24dp.svg"></mat-icon>
                 <mat-icon id="icon" style="margin-top: -50%;">search</mat-icon>
             </a>
             <input id="searchbar" type="text" placeholder="Search..." (keyup)="searchTitle($event)">
@@ -30,9 +30,9 @@
             fxLayoutAlign="center center">
 
             <div class="cart-div">
-                <button mat-icon-button class="cart-but" aria-label="Example cart icon" routerLink="/dashboard/cart" (click)="onCart()">
-                    <img src="../../../assets/cart.svg" alt="" class="profile-icon" height="20px" width="20px">
-                </button>
+                <mat-icon *ngIf="cartitems?.length>0" routerLink="/dashboard/cart" matBadge={{cartitems?.length}} style="color:white">
+                    shopping_cart</mat-icon>
+                    <mat-icon *ngIf="cartitems?.length===0" routerLink="/dashboard/cart" style="color:white">shopping_cart</mat-icon>
                 <a href="" class="cart-hint">Cart</a>
             </div>
         </span>

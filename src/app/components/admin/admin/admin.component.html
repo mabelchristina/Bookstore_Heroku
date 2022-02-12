@@ -1,5 +1,5 @@
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons&display=block" rel="stylesheet">
-<button style="float: right; " color="primary"   routerLink="/add-books" >Add </button>
+
 <table class="css-serial" BORDER="7" WIDTH="70%" CELLPADDING="21" CELLSPACING="0">
     <thead>
         <tr style="border: 1px solid #DCDCDC;background-color: gainsboro">
@@ -26,11 +26,12 @@
             <td>{{book.quantity}}</td>
             <td>
               <div>  <!-- <div fxLayout="column" fxLayoutGap="15px"> -->
-                    <button (click)="openDialog(book)">update</button>
-                    <button (click)="delete(book)">delete</button>
+                    <button mat-raised-button color="primary"(click)="openDialog(book)">update</button>
+                    <button mat-raised-button  style="margin-left:1%;" color="primary" (click)="delete(book)">delete</button>
                 </div>
             </td>
         </tr>
     </tbody>
 </table>
+<button mat-raised-button color="primary" style="margin-left:2%;"  routerLink="/add-books" >Add </button> 
 

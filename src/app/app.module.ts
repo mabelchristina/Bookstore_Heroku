@@ -31,6 +31,8 @@ import { AddNewBookComponent } from './components/addNewBook/add-new-book/add-ne
 import { SearchPipe } from './pipe/search.pipe';
 import { UpdateBookComponent } from './components/updateBook/update-book/update-book.component';
 import { MatSliderModule } from '@angular/material/slider';
+import {MatBadgeModule} from '@angular/material/badge';
+import {MatButtonModule} from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -68,7 +70,9 @@ import { MatSliderModule } from '@angular/material/slider';
     MatExpansionModule,
     MatRadioModule,
     MatDialogModule,
-    MatSliderModule
+    MatSliderModule,
+    MatBadgeModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent],
