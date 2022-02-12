@@ -1,3 +1,6 @@
+import { setupTestingRouter } from "@angular/router/testing";
+
 export const environment = {
-  production: true
+  production: true,
+  BaseUrl:true
 };
